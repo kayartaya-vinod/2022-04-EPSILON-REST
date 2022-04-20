@@ -1,0 +1,22 @@
+# RFC 2616
+# First line of a request is called  REQUEST LINE
+# It is followed by a bunch of request headers (key/value pairs separated using a colon)
+# For POST/PUT/PATCH, the headers are followed by a blank linke and then followed by request body (payload)
+# The request line conists of 3 parts: HTTP-METHOD PATH-TO-THE-RESOUCE HTTP-VERSION (optional)
+
+# What is in a response?
+# First line is called a status line
+# it is made up of 3 parts (i) Http version (ii) Http Response code (iii) Http Response text (optional)
+# A status line is followed by a bunch of headers (sent by the server)
+# This set of headers is followed by blank line, which is followed by the Response body (payload)
+# Depdending on the value of "Content-Type" response header, the payload changes
+
+
+GET /?t=Thor&apikey=aa9e49f HTTP/1.1
+Host: omdbapi.com
+Accept: application/xml
+
+###
+GET /?apikey=aa9e49f&s=thor&type=series
+Host: omdbapi.com
+
