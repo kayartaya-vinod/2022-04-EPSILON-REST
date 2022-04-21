@@ -1,0 +1,184 @@
+GET /api/contacts HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+
+###
+GET /api/contacts/3f539708-75aa-42d3-8db1-6d1a72fb0e0c HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts/3f539708-75aa-42d3-8db1-6d1a72fb0e0c HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+
+###
+GET /api/contacts?gender=Female HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts?gender=Female HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+
+###
+GET /api/contacts?state=Colorado HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts?state=Colorado HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+###
+GET /api/contacts?city=Bangalore HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts?city=Bangalore HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+###
+GET /api/contacts?email=ukinver4r@sun.com HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts?email=ukinver4r@sun.com HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+###
+GET /api/contacts?phone=26661911 HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+###
+GET /api/contacts?phone=26661911 HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+###
+
+POST /api/contacts
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstname": "Harish",
+  "lastname": "Rao",
+  "gender": "Male",
+  "email": "haris.rao@xmpl.com",
+  "phone": "9879873456",
+  "address": "SBI Layout",
+  "city": "Bangalore",
+  "state": "Karnataka",
+  "country": "India",
+  "pincode": "560068"
+}
+
+###
+GET /api/contacts?country=India HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+
+###
+
+GET /api/users
+Host: reqres.in
+Accept: application/json
+
+###
+POST /api/contacts HTTP/1.1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 90
+
+firstname=Shyam&lastname=Sundar&gender=Male&email=shyam.sundar%40xmpl.com&phone=9878767654
+
+###
+
+PUT /api/contacts/db540725-f9fe-4835-9c68-c68d3858c8d1
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+Content-Type: application/json
+
+{
+  "gender": "Male",
+  "email": "shyam.sundar@xmpl.com",
+  "phone": "9878767654",
+  "city": "Shivamogga",
+  "state": "Karnataka",
+  "country": "India",
+  "firstname": "Shyam",
+  "lastname": "Sundar"
+}
+
+###
+
+GET /api/contacts/d08efee3-d9fe-47e7-b7fe-372c04d0ecfc
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+
+###
+
+PATCH /api/contacts/d08efee3-d9fe-47e7-b7fe-372c04d0ecfc
+Host: vin-contact-service.herokuapp.com
+Accept: application/json
+Content-Type: application/json
+
+{
+    "country": "India"
+}
+###
+
+PATCH /api/contacts/d08efee3-d9fe-47e7-b7fe-372c04d0ecfc
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+Content-Type: application/xml
+
+<?xml version="1.0"?>
+<contact>
+    <state>Karnataka</state>
+    <city>Bangalore</city>
+</contact>
+
+###
+DELETE /api/contacts/d08efee3-d9fe-47e7-b7fe-372c04d0ecfc
+Host: vin-contact-service.herokuapp.com
+Accept: application/xml
+
+
+###
+POST /login
+Host: vinbasket.herokuapp.com
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "vinod@vinod.co",
+    "password": "topsecret"
+}
+
+
+###
+GET /orders
+Host: vinbasket.herokuapp.com
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlZpbm9kIEt1bWFyIiwiaWF0IjoxNjUwNTIzODU1fQ.E-_1fBHAYUHti4Ww-8u8MOknr9NYKw1xVXVGKy3_hxk
+
+
+###
+GET /orders/5
+Host: vinbasket.herokuapp.com
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IlZpbm9kIEt1bWFyIiwiaWF0IjoxNjUwNTIzODU1fQ.E-_1fBHAYUHti4Ww-8u8MOknr9NYKw1xVXVGKy3_hxk
+
+

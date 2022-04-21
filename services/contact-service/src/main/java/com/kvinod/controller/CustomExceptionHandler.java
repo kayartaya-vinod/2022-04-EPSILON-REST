@@ -14,10 +14,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @Slf4j
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
-    @ExceptionHandler({ServiceException.class})
+    @ExceptionHandler({ServiceException.class, NullPointerException.class})
     protected ResponseEntity<Object> handleConflict(
             RuntimeException ex, WebRequest request) {
-        log.info("CustomExceptionHandler.handleConflict() called");
+        log.error("CustomExceptionHandler.handleConflict() called", ex);
         return handleExceptionInternal(ex, new ErrorInfo(ex.getMessage()),
                 new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
     }
